@@ -1,0 +1,46 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Gráfico de Oferta Agregada Clássica
+plt.figure(figsize=(10, 6))
+# Curvas de Oferta Agregada
+plt.plot([10, 10], [0, 100], label='LRAS (antes)', linestyle='--')
+plt.plot([12, 12], [0, 100], label='LRAS (depois)', linestyle='-')
+# Configurações
+plt.xlabel('Produção Real (Y)')
+plt.ylabel('Nível de Preços (P)')
+plt.title('Oferta Agregada Clássica')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Gráfico de Oferta Agregada Keynesiana
+plt.figure(figsize=(10, 6))
+# Curvas de Demanda Agregada
+plt.plot([0, 100], [20, 0], label='AD (antes)', linestyle='--')
+plt.plot([0, 100], [15, 0], label='AD (depois)', linestyle='-')
+# Curva de Oferta Agregada
+plt.plot([0, 50, 100], [0, 10, 100], label='AS')
+# Configurações
+plt.xlabel('Produção Real (Y)')
+plt.ylabel('Nível de Preços (P)')
+plt.title('Oferta Agregada Keynesiana')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Gráfico de IS-LM
+plt.figure(figsize=(10, 6))
+# Curvas IS
+plt.plot([0, 100], [10, 0], label='IS (antes)', linestyle='--')
+plt.plot([0, 100], [8, 0], label='IS (depois)', linestyle='-')
+# Curva LM
+plt.plot([0, 100], [5, 15], label='LM')
+# Configurações
+plt.xlabel('Produção Real (Y)')
+plt.ylabel('Taxa de Juros (i)')
+plt.title('Curvas IS-LM')
+plt.legend()
+plt.grid(True)
+plt.show()
+
