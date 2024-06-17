@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Parâmetros
+Y0 = 100  # Produção inicial
+P0 = 100  # Nível de preços inicial
+alpha = 0.5  # Sensibilidade da produção ao nível de preços
+
+# Valores para o nível de preços
+P = np.linspace(80, 120, 100)
+
+# Função da SRAS keynesiana
+Y = Y0 + alpha * (P - P0)
+
+# Criar o gráfico
+plt.figure(figsize=(8, 6))
+plt.plot(Y, P, label='SRAS Keynesiana')
+plt.axhline(y=P0, color='gray', linestyle='--', linewidth=0.8)
+plt.axvline(x=Y0, color='gray', linestyle='--', linewidth=0.8)
+plt.xlabel('Produção (Y)')
+plt.ylabel('Nível de Preços (P)')
+plt.title('Curva de Oferta Agregada Keynesiana (SRAS)')
+plt.legend()
+plt.grid(True)
+plt.show()
